@@ -1,1 +1,1 @@
-# CourseProject
+# Text_Summarizer
