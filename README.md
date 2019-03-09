@@ -1,6 +1,6 @@
 # Text_Summarizer
 
-This app will give you ability to summarize pasted text, or text on given url.
+This app will give you ability to summarize pasted text, or text on given url.App will provide text, that will give an idea of the meaning of the text.
 
 ## Getting Started
 
