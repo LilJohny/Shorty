@@ -15,7 +15,7 @@ def get_words_embeddings(sentences, size=100, window=5, min_count=5, workers=3, 
         sg {int} -- 0 for CBOW and 1 for skip-gram (default: {0})
     
     Returns:
-        [dict] -- word embeddings
+        dict -- word embeddings
     '''
 
     model = Word2Vec(sentences=sentences, size=size, window=window,
