@@ -4,10 +4,10 @@ import urllib.request
 
 def get_text_url(url: str):
     '''Function returns article text from given url.
-    
+
     Arguments:
         url {str} -- URL to download article text.
-    
+
     Returns:
         str -- Return article text from given url.
     '''

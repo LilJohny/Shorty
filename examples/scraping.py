@@ -1,6 +1,7 @@
 from newspaper import Article
 import langdetect
 
+
 def get_text(url):
     '''Function returns article text by given url
 
