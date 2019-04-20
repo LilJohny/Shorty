@@ -7,6 +7,8 @@ import numpy as np
 
 
 class Vocabulary:
+    """Class representing instance, that can create embedding voabulary of given size
+    """
     EMPTY = 0
     EOS = 1
     START_IDX = EOS + 1
@@ -19,6 +21,17 @@ class Vocabulary:
                  vocab_size=40000,
                  embedding_dim=100,
                  lower=False):
+        """Method creates new instance of class Vocabulary
+        
+        Arguments:
+            data_filename {str} -- Filename of binary data to read
+        
+        Keyword Arguments:
+            seed {int} -- Value to seed random embeddings (default: {42})
+            vocab_size {int} -- Maximum size of vocabulary (default: {40000})
+            embedding_dim {int} -- Embedding dimensions (default: {100})
+            lower {bool} -- Make text lower or not (default: {False})
+        """
         self._data_filename = data_filename
         self._seed = seed
         self._vocab_size = vocab_size
@@ -55,6 +68,11 @@ class Vocabulary:
         return word2idx, idx2word
 
     def get_embeddings(self):
+        """Method computes dictionary of embedding of given size
+        
+        Returns:
+            tuple -- Tuple o computed dictionaries
+        """
         vocab, vocab_count = self._get_vocab(self._heads + self._desc)
         self._word2idx, self._idx2word = self._get_idx(vocab)
         self._glove_n_symbols, self._glove_name = self._get_dataset_size()
@@ -70,6 +88,11 @@ class Vocabulary:
         return self._embedding, self._idx2word, self._word2idx, glove_idx2idx
 
     def get_source_data(self):
+        """Method returns flatten source data
+        
+        Returns:
+            tuple -- Tuple of X and Y data for given data
+        """
         X = [[self._word2idx[token] for token in d.split()]
              for d in self._desc]
         Y = [[self._word2idx[token] for token in headline.split()]
@@ -78,12 +101,22 @@ class Vocabulary:
 
     @staticmethod
     def dump_source_data(data):
+        """Method dumps given source data into 'data/vocabulary-embedding.data.pkl' 
+        
+        Arguments:
+            data {tuple} -- Source data to dump
+        """
         X, Y = data
         with open('data/vocabulary-embedding.data.pkl', 'wb') as fp:
             pickle.dump((X, Y), fp, -1)
 
     @staticmethod
     def dump_embeddings(data):
+        """Method dumps given embedding data into 'data/vocabulary-embedding.pkl'
+        
+        Arguments:
+            data {tuple} -- Embedding data to dump
+        """
         embedding, idx2word, word2idx, glove_idx2idx = data
         with open('data/vocabulary-embedding.pkl', 'wb') as fp:
             pickle.dump((embedding, idx2word, word2idx, glove_idx2idx), fp, -1)
