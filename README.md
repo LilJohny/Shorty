@@ -12,6 +12,9 @@ Use this command to install package:
 Install needed packages by command:
 `pip install -r requirements.txt`
 
+## Usage
+python3 Text_Summarizer/Summarizer/app.py path_to_text_file language number_of_sentences_in_summary
+
 ## Authors
 
 * **Denis Ivanenko** - *All work* 

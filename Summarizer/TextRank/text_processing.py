@@ -1,7 +1,7 @@
 import os
 import re
 from pathlib import Path
-
+import copy
 import langdetect
 from newspaper import Article
 from nltk.corpus import stopwords
@@ -34,13 +34,13 @@ def sanitize_sentences(article: list):
     Returns:
         [list] -- List of list with sanitized sentences.
     """
-
+    sanitized_article = copy.deepcopy(article)
     for i in range(len(article)):
-        article[i] = re.sub(r'[^a-zA-Z]', ' ', article[i])
-        article[i] = re.sub(r'\[[0-9]*\]', ' ', article[i])
-        article[i] = re.sub(r'\s+', ' ', article[i])
-        article[i] = article[i].lower()
-    return article
+        sanitized_article[i] = re.sub(r'[^a-zA-Z]', ' ', sanitized_article[i])
+        sanitized_article[i] = re.sub(r'\[[0-9]*\]', ' ', sanitized_article[i])
+        sanitized_article[i] = re.sub(r'\s+', ' ', sanitized_article[i])
+        sanitized_article[i] = sanitized_article[i].lower()
+    return sanitized_article
 
 
 def remove_stopwords(sentence: list, stopwords):
