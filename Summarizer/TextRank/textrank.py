@@ -1,13 +1,15 @@
 import numpy as np
 from nltk.tokenize import sent_tokenize
-import data
+import TextRank.data
 from sklearn.metrics.pairwise import cosine_similarity
 from text_processing import sanitize_sentences, get_stopwords
 import networkx as nx
-import  re
+import re
 
-class TextRank:
+
+class TextRankSummarizer:
     """Class that implements TextRank algorithm"""
+
     def __init__(self, language):
         """Method initializes new instance of class TextRank
         
@@ -19,6 +21,8 @@ class TextRank:
         self._word_embeddings = {}
         self._stopwords = None
         self.language = language
+        self._load_word_embeddings()
+        self._load_stop_words()
 
     def set_text(self, text):
         """Method sets text for TextRank processing
@@ -46,6 +50,7 @@ class TextRank:
             word = values[0]
             coefs = np.asarray(values[1:], dtype='float32')
             self._word_embeddings[word] = coefs
+        f.close()
 
     def _load_stop_words(self):
         """Method loads stop words

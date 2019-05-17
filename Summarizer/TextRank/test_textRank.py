@@ -3,11 +3,13 @@ from textrank import TextRank
 from nltk.tokenize import sent_tokenize
 from text_processing import sanitize_sentences
 
+from TextRank.textrank import TextRankSummarizer
+
 
 class TestTextRank(TestCase):
 
     def setUp(self):
-        self.summarizer = TextRank("english")
+        self.summarizer = TextRankSummarizer("english")
 
     def test_set_text(self):
         text = "We had a bunch of photographs of the main PCB, a YouTube video with drain-voltage waveforms of " \
@@ -33,15 +35,14 @@ class TestTextRank(TestCase):
         more helpless and irresponsible and depraved than burned cartridge newly bought for 60 bucks from Amazon. But 
         let me start from the beginning. """
         self.summarizer.set_text(text)
-        self.assertEqual(self.summarizer.get_summary(1), ["We had a bunch of photographs of the main PCB, a YouTube "
-                                                          "video with drain-voltage waveforms of MOSFETs, "
-                                                          "a forum post with a breakdown of the capacitance values of "
-                                                          "LC circuit capacitors and also a number of unboxing videos "
-                                                          "showing the heating-up of the soldering tip."])
+        self.assertEqual(self.summarizer.get_summary(1), ["The only thing that really worried me was the video with "
+                                                          "the measurement of the peak power consumption during the "
+                                                          "heating-up."])
+        summary = self.summarizer.get_summary(2)
         self.assertEqual(self.summarizer.get_summary(2), [
-            "We had a bunch of photographs of the main PCB, a YouTube video with drain-voltage waveforms of MOSFETs, "
-            "a forum post with a breakdown of the capacitance values of LC circuit capacitors and also a number of "
-            "unboxing videos showing the heating-up of the soldering tip.",
+            "The only thing that really worried me was the video with "
+            "the measurement of the peak power consumption during the "
+            "heating-up.",
             "There is nothing in the world more helpless and irresponsible and depraved than burned cartridge newly "
             "bought for 60 "
             "bucks from Amazon."])

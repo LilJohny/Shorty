@@ -1,4 +1,4 @@
-from TextRank.textrank import TextRank
+from TextRank.textrank import TextRankSummarizer
 import sys
 import os
 
@@ -18,7 +18,7 @@ def main():
         sys.argv[1], sys.argv[2], sys.argv[3] = path, language, sentences
     else:
         path, language, sentences = sys.argv[1], sys.argv[2], sys.argv[3]
-    summarizer = TextRank(language)
+    summarizer = TextRankSummarizer(language)
     text = read_file(path)
     summarizer.set_text("".join(text))
     sentences = int(sentences)
