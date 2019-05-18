@@ -23,14 +23,13 @@ class Vocabulary:
                  lower=False):
         """Method creates new instance of class Vocabulary
         
-        Arguments:
-            data_filename {str} -- Filename of binary data to read
         
-        Keyword Arguments:
-            seed {int} -- Value to seed random embeddings (default: {42})
-            vocab_size {int} -- Maximum size of vocabulary (default: {40000})
-            embedding_dim {int} -- Embedding dimensions (default: {100})
-            lower {bool} -- Make text lower or not (default: {False})
+        Args:
+            data_filename (str): Filename of binary data to read
+            seed (int, optional): Value to seed random embeddings. Defaults to 42.
+            vocab_size (int, optional): Maximum size of vocabulary. Defaults to 40000.
+            embedding_dim (int, optional): Embedding dimensions. Defaults to 100.
+            lower (bool, optional): Make text lower or not. Defaults to False.
         """
         self._data_filename = data_filename
         self._seed = seed
@@ -71,7 +70,7 @@ class Vocabulary:
         """Method computes dictionary of embedding of given size
         
         Returns:
-            tuple -- Tuple o computed dictionaries
+            tuple: Tuple of computed dictionaries
         """
         vocab, vocab_count = self._get_vocab(self._heads + self._desc)
         self._word2idx, self._idx2word = self._get_idx(vocab)
@@ -91,7 +90,7 @@ class Vocabulary:
         """Method returns flatten source data
         
         Returns:
-            tuple -- Tuple of X and Y data for given data
+            tuple: Tuple of X and Y data for given data
         """
         X = [[self._word2idx[token] for token in d.split()]
              for d in self._desc]
@@ -103,8 +102,8 @@ class Vocabulary:
     def dump_source_data(data):
         """Method dumps given source data into 'data/vocabulary-embedding.data.pkl' 
         
-        Arguments:
-            data {tuple} -- Source data to dump
+        Args:
+            data (tuple): Source data to dump
         """
         X, Y = data
         with open('data/vocabulary-embedding.data.pkl', 'wb') as fp:
@@ -114,8 +113,8 @@ class Vocabulary:
     def dump_embeddings(data):
         """Method dumps given embedding data into 'data/vocabulary-embedding.pkl'
         
-        Arguments:
-            data {tuple} -- Embedding data to dump
+        Args:
+            data (tuple): Embedding data to dump
         """
         embedding, idx2word, word2idx, glove_idx2idx = data
         with open('data/vocabulary-embedding.pkl', 'wb') as fp:

@@ -15,10 +15,10 @@ class TextRankSummarizer:
     """Class that implements TextRank algorithm"""
 
     def __init__(self, language):
-        """Method initializes new instance of class TextRank
+        """Method initializes new instance of TextRankSummarizer class
         
-        Arguments:
-            language {str} -- Language ofr TextRank algorithm
+        Args:
+            language (str): Language for TextRank algorithm
         """
         self._summary = None
         self._sentences = None
@@ -31,8 +31,8 @@ class TextRankSummarizer:
     def set_text(self, text):
         """Method sets text for TextRank processing
         
-        Arguments:
-            text {str} -- Text to process
+        Args:
+            text (str): Text to process
         """
         self._original_sentences = sent_tokenize(text)
         self._sentences = sanitize_sentences(self._original_sentences)
@@ -41,7 +41,7 @@ class TextRankSummarizer:
         """Method returns original text
         
         Returns:
-            str -- Original text
+            str: Original text
         """
         return self._original_sentences
 
@@ -58,13 +58,13 @@ class TextRankSummarizer:
         self._stopwords = get_stopwords(self.language)
 
     def get_summary(self, number_of_sentences):
-        """Method generates summary 
+        """Method generates summary
         
-        Arguments:
-            number_of_sentences {int} -- Number of sentences in summary
+        Args:
+            number_of_sentences (int): Number of sentences in summary
         
         Returns:
-            list -- List of summary sentences
+            list: List of summary sentences
         """
         sentence_vectors = []
         for sentence in self._sentences:

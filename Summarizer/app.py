@@ -34,12 +34,11 @@ def main():
 def get_user_data(error):
     """Function gets data from user
     
-    Arguments:
-        error {int} -- Type of data, that is incorrect or misiing (0 for amount of command args, 1 for path for file with text
-        2 for language and 3 for amount of sentences in summary)
+    Args:
+        error (int): Type of data, that is incorrect or misiing (0 for amount of command args, 1 for path for file with text
     
     Returns:
-        tuple -- Fixed data from user
+        tuple: Fixed data from user
     """
     if error == 0:
         print(
@@ -72,11 +71,11 @@ def get_user_data(error):
 def read_file(filename):
     """Function reads contents of file
     
-    Arguments:
-        filename {str} -- Filename to read
+    Args:
+        filename (str): Filename to read
     
     Returns:
-        list -- List with lines of text in file
+        list: List with lines of text in file
     """
     with open(filename, "r", encoding="utf-8") as fp:
         return fp.readlines()
@@ -85,9 +84,9 @@ def read_file(filename):
 def write_file(filename, text):
     """Function writes given text into file
     
-    Arguments:
-        filename {str} -- Filename to write text
-        text {list} -- List of lines to write
+    Args:
+        filename (str): Filename to write text
+        text (list): List of lines to write
     """
     with open(filename, "w", encoding="utf-8") as fp:
         for line in text:
