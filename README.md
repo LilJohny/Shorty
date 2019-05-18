@@ -13,7 +13,11 @@ Install needed packages by command:
 `pip install -r requirements.txt`
 
 ## Usage
-python3 Text_Summarizer/Summarizer/app.py path_to_text_file language number_of_sentences_in_summary
+clone repository </br>
+cd Text_Summarizer/Summarizer </br>
+python3 main.py </br>
+or </br>
+python3 app.py path_to_text_file language number_of_sentences_in_summary</br>
 
 ## Authors
 
