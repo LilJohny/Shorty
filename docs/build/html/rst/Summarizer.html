@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Summarizer package &#8212; Text_Summarizer 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="summarizer-package">
+<h1>Summarizer package<a class="headerlink" href="#summarizer-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Summarizer.TextRank.html">Summarizer.TextRank package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Summarizer.TextRank.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Summarizer.TextRank.html#module-Summarizer.TextRank.data">Summarizer.TextRank.data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Summarizer.TextRank.html#summarizer-textrank-test-textrank-module">Summarizer.TextRank.test_textRank module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Summarizer.TextRank.html#module-Summarizer.TextRank.text_processing">Summarizer.TextRank.text_processing module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Summarizer.TextRank.html#module-Summarizer.TextRank.textrank">Summarizer.TextRank.textrank module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Summarizer.TextRank.html#module-Summarizer.TextRank">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Summarizer.TextSummarizer">
+<span id="summarizer-textsummarizer-module"></span><h2>Summarizer.TextSummarizer module<a class="headerlink" href="#module-Summarizer.TextSummarizer" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Summarizer.TextSummarizer.Ui_MainWindow">
+<em class="property">class </em><code class="descclassname">Summarizer.TextSummarizer.</code><code class="descname">Ui_MainWindow</code><a class="headerlink" href="#Summarizer.TextSummarizer.Ui_MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Summarizer.TextSummarizer.Ui_MainWindow.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextSummarizer.Ui_MainWindow.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.TextSummarizer.Ui_MainWindow.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>MainWindow</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextSummarizer.Ui_MainWindow.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="summarizer-app-module">
+<h2>Summarizer.app module<a class="headerlink" href="#summarizer-app-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Summarizer.app_helpers">
+<span id="summarizer-app-helpers-module"></span><h2>Summarizer.app_helpers module<a class="headerlink" href="#module-Summarizer.app_helpers" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Summarizer.app_helpers.count_sentences">
+<code class="descclassname">Summarizer.app_helpers.</code><code class="descname">count_sentences</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.app_helpers.count_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function counts sentences in given text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Text to count sentences</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of sentences</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.app_helpers.get_file_menu_help">
+<code class="descclassname">Summarizer.app_helpers.</code><code class="descname">get_file_menu_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.app_helpers.get_file_menu_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns file menu help</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Text of file menu help</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.app_helpers.get_general_help">
+<code class="descclassname">Summarizer.app_helpers.</code><code class="descname">get_general_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.app_helpers.get_general_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns general help</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Text of general help</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.app_helpers.get_summarization_help">
+<code class="descclassname">Summarizer.app_helpers.</code><code class="descname">get_summarization_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.app_helpers.get_summarization_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns summarization help</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Text of summarization help</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.app_helpers.read_file">
+<code class="descclassname">Summarizer.app_helpers.</code><code class="descname">read_file</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.app_helpers.read_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function reads text file contents</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em>) – File name to read</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>:ist of lines in file</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.app_helpers.read_url">
+<code class="descclassname">Summarizer.app_helpers.</code><code class="descname">read_url</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.app_helpers.read_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns article text on this url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – Url to search article</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Article text</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.data">
+<span id="summarizer-data-module"></span><h2>Summarizer.data module<a class="headerlink" href="#module-Summarizer.data" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Summarizer.data.download_data">
+<code class="descclassname">Summarizer.data.</code><code class="descname">download_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.data.download_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function checks if needed data if presented and if not downloads it</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.embeddings">
+<span id="summarizer-embeddings-module"></span><h2>Summarizer.embeddings module<a class="headerlink" href="#module-Summarizer.embeddings" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Summarizer.embeddings.get_words_embeddings">
+<code class="descclassname">Summarizer.embeddings.</code><code class="descname">get_words_embeddings</code><span class="sig-paren">(</span><em>sentences</em>, <em>size=100</em>, <em>window=5</em>, <em>min_count=5</em>, <em>workers=3</em>, <em>sg=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.embeddings.get_words_embeddings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function computes word embeddings for given sentences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentences</strong> (<em>list</em>) – List of sentences, where each sentence is list of words as strings</p></li>
+<li><p><strong>size</strong> (<em>int</em><em>, </em><em>optional</em>) – Dimensionality of the feature vectors. Defaults to 100.</p></li>
+<li><p><strong>window</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum distance between the current and predicted word within a sentence. Defaults to 5.</p></li>
+<li><p><strong>min_count</strong> (<em>int</em><em>, </em><em>optional</em>) – Ignores all words with total absolute frequency lower than this. Defaults to 5.</p></li>
+<li><p><strong>workers</strong> (<em>int</em><em>, </em><em>optional</em>) – Use these many worker threads to train the model (=faster training with multicore machines) . Defaults to 3.</p></li>
+<li><p><strong>sg</strong> (<em>int</em><em>, </em><em>optional</em>) – 0 for CBOW and 1 for skip-gram. Defaults to 0.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Word embeddings</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.link_reader">
+<span id="summarizer-link-reader-module"></span><h2>Summarizer.link_reader module<a class="headerlink" href="#module-Summarizer.link_reader" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Summarizer.link_reader.Ui_LinkReader">
+<em class="property">class </em><code class="descclassname">Summarizer.link_reader.</code><code class="descname">Ui_LinkReader</code><a class="headerlink" href="#Summarizer.link_reader.Ui_LinkReader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="Summarizer.link_reader.Ui_LinkReader.retranslateUi">
+<code class="descname">retranslateUi</code><span class="sig-paren">(</span><em>LinkReader</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.link_reader.Ui_LinkReader.retranslateUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.link_reader.Ui_LinkReader.setupUi">
+<code class="descname">setupUi</code><span class="sig-paren">(</span><em>LinkReader</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.link_reader.Ui_LinkReader.setupUi" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.main">
+<span id="summarizer-main-module"></span><h2>Summarizer.main module<a class="headerlink" href="#module-Summarizer.main" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Summarizer.main.GUIForm">
+<em class="property">class </em><code class="descclassname">Summarizer.main.</code><code class="descname">GUIForm</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code></p>
+<p>Class representing app main window</p>
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.edit_text">
+<code class="descname">edit_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.edit_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles text editing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.open_file_dialog">
+<code class="descname">open_file_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.open_file_dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles opening file dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.open_url">
+<code class="descname">open_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.open_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles opening url</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.process_url">
+<code class="descname">process_url</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.process_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method processes url</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.show_file_menu_help">
+<code class="descname">show_file_menu_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.show_file_menu_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles file menu help</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.show_general_help">
+<code class="descname">show_general_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.show_general_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles general help</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.show_summary_help">
+<code class="descname">show_summary_help</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.show_summary_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles summary help</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.main.GUIForm.summarize">
+<code class="descname">summarize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.GUIForm.summarize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method handles summarization</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.main.main">
+<code class="descclassname">Summarizer.main.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.main.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.recursive_loop">
+<span id="summarizer-recursive-loop-module"></span><h2>Summarizer.recursive_loop module<a class="headerlink" href="#module-Summarizer.recursive_loop" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Summarizer.recursive_loop.RecursiveLoopLayer">
+<em class="property">class </em><code class="descclassname">Summarizer.recursive_loop.</code><code class="descname">RecursiveLoopLayer</code><span class="sig-paren">(</span><em>maxlend</em>, <em>rnn_size</em>, <em>activation_rnn_size</em>, <em>maxlenh</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.recursive_loop.RecursiveLoopLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">keras.layers.core.Lambda</span></code></p>
+<p>Class representing RecursiveLoop for keras</p>
+<dl class="method">
+<dt id="Summarizer.recursive_loop.RecursiveLoopLayer.compute_mask">
+<code class="descname">compute_mask</code><span class="sig-paren">(</span><em>inputs</em>, <em>mask=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.recursive_loop.RecursiveLoopLayer.compute_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes an output mask tensor.</p>
+<dl class="simple">
+<dt># Arguments</dt><dd><p>inputs: Tensor or list of tensors.
+mask: Tensor or list of tensors.</p>
+</dd>
+<dt># Returns</dt><dd><dl class="simple">
+<dt>None or a tensor (or list of tensors,</dt><dd><p>one per output tensor of the layer).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.recursive_loop.RecursiveLoopLayer.compute_output_shape">
+<code class="descname">compute_output_shape</code><span class="sig-paren">(</span><em>input_shape</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.recursive_loop.RecursiveLoopLayer.compute_output_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the output shape of the layer.</p>
+<p>Assumes that the layer will be built
+to match that input shape provided.</p>
+<dl class="simple">
+<dt># Arguments</dt><dd><dl class="simple">
+<dt>input_shape: Shape tuple (tuple of integers)</dt><dd><p>or list of shape tuples (one per output tensor of the layer).
+Shape tuples can include None for free dimensions,
+instead of an integer.</p>
+</dd>
+</dl>
+</dd>
+<dt># Returns</dt><dd><p>An input shape tuple.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Summarizer.recursive_loop.RecursiveLoopLayer.recursive_loop">
+<em class="property">static </em><code class="descname">recursive_loop</code><span class="sig-paren">(</span><em>X</em>, <em>mask</em>, <em>n</em>, <em>maxlend</em>, <em>maxlenh</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.recursive_loop.RecursiveLoopLayer.recursive_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="summarizer-test-vocabulary-module">
+<h2>Summarizer.test_vocabulary module<a class="headerlink" href="#summarizer-test-vocabulary-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Summarizer.text_processing">
+<span id="summarizer-text-processing-module"></span><h2>Summarizer.text_processing module<a class="headerlink" href="#module-Summarizer.text_processing" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Summarizer.text_processing.get_stopwords">
+<code class="descclassname">Summarizer.text_processing.</code><code class="descname">get_stopwords</code><span class="sig-paren">(</span><em>language</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.text_processing.get_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns stopwords for given language</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>language</strong> (<em>str</em>) – Full name of language, for example ‘english’ or  ‘german’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>stopwords for given language</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.text_processing.get_text">
+<code class="descclassname">Summarizer.text_processing.</code><code class="descname">get_text</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.text_processing.get_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns article text by given url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – URL to parse</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Article text from given url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.text_processing.remove_stopwords">
+<code class="descclassname">Summarizer.text_processing.</code><code class="descname">remove_stopwords</code><span class="sig-paren">(</span><em>sentence: list</em>, <em>stopwords</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.text_processing.remove_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function removes stopwords from sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> (<em>list</em>) – Sentence in english language.</p></li>
+<li><p><strong>stopwords</strong> (<em>list</em>) – List of stopwords</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sentence without stopwords.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.text_processing.sanitize_sentences">
+<code class="descclassname">Summarizer.text_processing.</code><code class="descname">sanitize_sentences</code><span class="sig-paren">(</span><em>article: list</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.text_processing.sanitize_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function removes all non alphabet symbols from articles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article</strong> (<em>list</em>) – List of sentences</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of list with sanitized sentences.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.text_processing.split_into_sentences">
+<code class="descclassname">Summarizer.text_processing.</code><code class="descname">split_into_sentences</code><span class="sig-paren">(</span><em>article_text</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.text_processing.split_into_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function splits text into sentences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article_text</strong> (<em>str</em>) – Text to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of sentences from given text</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.text_processing.tokenize">
+<code class="descclassname">Summarizer.text_processing.</code><code class="descname">tokenize</code><span class="sig-paren">(</span><em>article_text: list</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.text_processing.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function tokenizes sentences into words.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article_text</strong> (<em>list</em>) – List of sentences.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of lists with tokenized sentences.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.vocabulary">
+<span id="summarizer-vocabulary-module"></span><h2>Summarizer.vocabulary module<a class="headerlink" href="#module-Summarizer.vocabulary" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Summarizer.vocabulary.Vocabulary">
+<em class="property">class </em><code class="descclassname">Summarizer.vocabulary.</code><code class="descname">Vocabulary</code><span class="sig-paren">(</span><em>data_filename</em>, <em>seed=42</em>, <em>vocab_size=40000</em>, <em>embedding_dim=100</em>, <em>lower=False</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class representing instance, that can create embedding voabulary of given size</p>
+<dl class="attribute">
+<dt id="Summarizer.vocabulary.Vocabulary.EMPTY">
+<code class="descname">EMPTY</code><em class="property"> = 0</em><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.EMPTY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Summarizer.vocabulary.Vocabulary.EOS">
+<code class="descname">EOS</code><em class="property"> = 1</em><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.EOS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Summarizer.vocabulary.Vocabulary.GLOVE_THR">
+<code class="descname">GLOVE_THR</code><em class="property"> = 0.5</em><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.GLOVE_THR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Summarizer.vocabulary.Vocabulary.NB_UNKNOWN_WORDS">
+<code class="descname">NB_UNKNOWN_WORDS</code><em class="property"> = 100</em><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.NB_UNKNOWN_WORDS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Summarizer.vocabulary.Vocabulary.START_IDX">
+<code class="descname">START_IDX</code><em class="property"> = 2</em><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.START_IDX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="Summarizer.vocabulary.Vocabulary.dump_embeddings">
+<em class="property">static </em><code class="descname">dump_embeddings</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.dump_embeddings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method dumps given embedding data into ‘data/vocabulary-embedding.pkl’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>tuple</em>) – Embedding data to dump</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="Summarizer.vocabulary.Vocabulary.dump_source_data">
+<em class="property">static </em><code class="descname">dump_source_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.dump_source_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method dumps given source data into ‘data/vocabulary-embedding.data.pkl’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>tuple</em>) – Source data to dump</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.vocabulary.Vocabulary.get_embeddings">
+<code class="descname">get_embeddings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.get_embeddings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method computes dictionary of embedding of given size</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Tuple of computed dictionaries</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.vocabulary.Vocabulary.get_source_data">
+<code class="descname">get_source_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.vocabulary.Vocabulary.get_source_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns flatten source data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Tuple of X and Y data for given data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Summarizer" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Text_Summarizer</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Denis Ivanenko.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/Summarizer.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

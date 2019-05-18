@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Summarizer.TextRank package &#8212; Text_Summarizer 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="summarizer-textrank-package">
+<h1>Summarizer.TextRank package<a class="headerlink" href="#summarizer-textrank-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Summarizer.TextRank.data">
+<span id="summarizer-textrank-data-module"></span><h2>Summarizer.TextRank.data module<a class="headerlink" href="#module-Summarizer.TextRank.data" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Summarizer.TextRank.data.download_data">
+<code class="descclassname">Summarizer.TextRank.data.</code><code class="descname">download_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.data.download_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function checks if needed data if presented and if not downloads it</p>
+</dd></dl>
+
+</div>
+<div class="section" id="summarizer-textrank-test-textrank-module">
+<h2>Summarizer.TextRank.test_textRank module<a class="headerlink" href="#summarizer-textrank-test-textrank-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-Summarizer.TextRank.text_processing">
+<span id="summarizer-textrank-text-processing-module"></span><h2>Summarizer.TextRank.text_processing module<a class="headerlink" href="#module-Summarizer.TextRank.text_processing" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="Summarizer.TextRank.text_processing.get_stopwords">
+<code class="descclassname">Summarizer.TextRank.text_processing.</code><code class="descname">get_stopwords</code><span class="sig-paren">(</span><em>language</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.text_processing.get_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns stopwords for given language</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>language</strong> (<em>str</em>) – Full name of language, for example ‘english’ or  ‘german’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Stopwords for given language</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.TextRank.text_processing.get_text">
+<code class="descclassname">Summarizer.TextRank.text_processing.</code><code class="descname">get_text</code><span class="sig-paren">(</span><em>url</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.text_processing.get_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function returns article text by given url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>url</strong> (<em>str</em>) – URL to parse</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Article text from given url</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.TextRank.text_processing.remove_stopwords">
+<code class="descclassname">Summarizer.TextRank.text_processing.</code><code class="descname">remove_stopwords</code><span class="sig-paren">(</span><em>sentence: list</em>, <em>stopwords</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.text_processing.remove_stopwords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function removes stopwords from sentence.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sentence</strong> (<em>list</em>) – Sentence in english language.</p></li>
+<li><p><strong>stopwords</strong> (<em>list</em>) – List of stopwords</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Sentence without stopwords.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.TextRank.text_processing.sanitize_sentences">
+<code class="descclassname">Summarizer.TextRank.text_processing.</code><code class="descname">sanitize_sentences</code><span class="sig-paren">(</span><em>article: list</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.text_processing.sanitize_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function removes all non alphabet symbols from articles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article</strong> (<em>list</em>) – List of sentences</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of list with sanitized sentences.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.TextRank.text_processing.split_into_sentences">
+<code class="descclassname">Summarizer.TextRank.text_processing.</code><code class="descname">split_into_sentences</code><span class="sig-paren">(</span><em>article_text</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.text_processing.split_into_sentences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function splits text into sentences</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article_text</strong> (<em>str</em>) – Text to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of sentences from given text</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Summarizer.TextRank.text_processing.tokenize">
+<code class="descclassname">Summarizer.TextRank.text_processing.</code><code class="descname">tokenize</code><span class="sig-paren">(</span><em>article_text: list</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.text_processing.tokenize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function tokenizes sentences into words.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>article_text</strong> (<em>list</em>) – List of sentences.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of lists with tokenized sentences.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.TextRank.textrank">
+<span id="summarizer-textrank-textrank-module"></span><h2>Summarizer.TextRank.textrank module<a class="headerlink" href="#module-Summarizer.TextRank.textrank" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Summarizer.TextRank.textrank.TextRankSummarizer">
+<em class="property">class </em><code class="descclassname">Summarizer.TextRank.textrank.</code><code class="descname">TextRankSummarizer</code><span class="sig-paren">(</span><em>language</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.textrank.TextRankSummarizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class that implements TextRank algorithm</p>
+<dl class="method">
+<dt id="Summarizer.TextRank.textrank.TextRankSummarizer.get_summary">
+<code class="descname">get_summary</code><span class="sig-paren">(</span><em>number_of_sentences</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.textrank.TextRankSummarizer.get_summary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method generates summary</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>number_of_sentences</strong> (<em>int</em>) – Number of sentences in summary</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of summary sentences</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.TextRank.textrank.TextRankSummarizer.get_text">
+<code class="descname">get_text</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.textrank.TextRankSummarizer.get_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method returns original text</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Original text</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="Summarizer.TextRank.textrank.TextRankSummarizer.set_text">
+<code class="descname">set_text</code><span class="sig-paren">(</span><em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#Summarizer.TextRank.textrank.TextRankSummarizer.set_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method sets text for TextRank processing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> (<em>str</em>) – Text to process</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-Summarizer.TextRank">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-Summarizer.TextRank" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Text_Summarizer</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Denis Ivanenko.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/rst/Summarizer.TextRank.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
