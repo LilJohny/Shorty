@@ -1,6 +1,7 @@
 from unittest import TestCase
 from vocabulary import Vocabulary
-import  os
+import os
+
 
 class TestVocabulary(TestCase):
     def setUp(self):
@@ -11,6 +12,7 @@ class TestVocabulary(TestCase):
         self.vocabulary.dump_source_data(dummy_data)
         self.assertTrue(os.path.isfile("data/vocabulary-embedding.data.pkl"))
         os.remove("data/vocabulary-embedding.data.pkl")
+
     def test_dump_embeddings(self):
         dummy_data = ([0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0])
         self.vocabulary.dump_embeddings(dummy_data)

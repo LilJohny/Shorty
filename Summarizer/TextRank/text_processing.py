@@ -58,14 +58,14 @@ def remove_stopwords(sentence: list, stopwords):
 
 
 def tokenize(article_text: list):
-    '''Function tokenizes sentences into words.
+    """Function tokenizes sentences into words.
 
     Arguments:
         article_text {list} -- List of sentences.
 
     Returns:
         list -- List of lists with tokenized sentences.
-    '''
+    """
 
     sentences = []
     for st in article_text:
@@ -74,26 +74,26 @@ def tokenize(article_text: list):
 
 
 def split_into_sentences(article_text):
-    '''Function splits text into sentences
+    """Function splits text into sentences
 
     Arguments:
         article_text {str} -- Text to process
 
     Returns:
         list -- list of sentences from given text
-    '''
+    """
     return sent_tokenize(article_text)
 
 
 def get_text(url):
-    '''Function returns article text by given url
+    """Function returns article text by given url
 
     Arguments:
         url {str} -- URL to parse
 
     Returns:
         str -- Article text from given url.
-    '''
+    """
 
     article = Article(url)
     article.download()

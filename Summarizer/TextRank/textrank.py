@@ -1,10 +1,14 @@
-import numpy as np
-from nltk.tokenize import sent_tokenize
-import TextRank.data
-from sklearn.metrics.pairwise import cosine_similarity
-from text_processing import sanitize_sentences, get_stopwords
-import networkx as nx
+import pickle
 import re
+
+import networkx as nx
+import numpy as np
+try:
+    from TextRank.text_processing import sanitize_sentences, get_stopwords
+except ModuleNotFoundError:
+    from text_processing import sanitize_sentences, get_stopwords
+from nltk.tokenize import sent_tokenize
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 class TextRankSummarizer:
@@ -44,13 +48,9 @@ class TextRankSummarizer:
     def _load_word_embeddings(self):
         """Method loads word embeddings
         """
-        f = open('data/glove.6B.100d.txt', encoding='utf-8')
-        for line in f:
-            values = line.split()
-            word = values[0]
-            coefs = np.asarray(values[1:], dtype='float32')
-            self._word_embeddings[word] = coefs
-        f.close()
+        embeddings_file = open("data/glove.6B.100d.pkl", "rb")
+        self._word_embeddings = pickle.load(embeddings_file)
+        embeddings_file.close()
 
     def _load_stop_words(self):
         """Method loads stop words

@@ -3,6 +3,7 @@ from keras import backend as K
 
 
 class RecursiveLoopLayer(Lambda):
+    """Class representing RecursiveLoop for keras"""
     def __init__(self, maxlend, rnn_size, activation_rnn_size, maxlenh, **kwargs):
         super().__init__(self.recursive_loop, **kwargs)
         self.rnn_size = rnn_size

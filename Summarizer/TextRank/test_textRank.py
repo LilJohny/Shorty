@@ -1,9 +1,7 @@
 from unittest import TestCase
-from textrank import TextRank
+from textrank import TextRankSummarizer
 from nltk.tokenize import sent_tokenize
 from text_processing import sanitize_sentences
-
-from TextRank.textrank import TextRankSummarizer
 
 
 class TestTextRank(TestCase):
