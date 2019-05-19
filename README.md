@@ -25,4 +25,4 @@ python3 app.py path_to_text_file language number_of_sentences_in_summary</br>
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details
