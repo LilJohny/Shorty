@@ -1,12 +1,13 @@
 import sys
 from TextSummarizer import Ui_MainWindow
+from PyQt5.QtCore import QFile, QTextStream
 from PyQt5.QtWidgets import QApplication, QWidget, QMainWindow, QFileDialog, QMessageBox, QInputDialog, QLineEdit
 from app_helpers import read_file, read_url, count_sentences, get_file_menu_help, get_summarization_help, \
     get_general_help
 from link_reader import Ui_LinkReader
 from TextRank.textrank import TextRankSummarizer
 from urllib.parse import urlparse
-
+import data
 
 class GUIForm(QMainWindow):
     """Class representing app main window"""
@@ -116,11 +117,17 @@ class GUIForm(QMainWindow):
 
 
 def main():
+    data.download_data()
     app = QApplication([])
+    style_file = QFile("dark.qss")
+    style_file.open(QFile.ReadOnly | QFile.Text)
+    stream = QTextStream(style_file)
+    app.setStyleSheet(stream.readAll())
     summarizer_app = GUIForm()
     summarizer_app.setFixedHeight(summarizer_app.height())
     summarizer_app.setFixedWidth(summarizer_app.width())
     summarizer_app.show()
+    
     ret = app.exec_()
     sys.exit(ret)
 
