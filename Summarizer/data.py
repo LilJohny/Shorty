@@ -1,7 +1,4 @@
-import os
-
 import nltk
-import wget
 
 
 def download_data():

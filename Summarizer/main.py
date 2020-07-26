@@ -65,7 +65,7 @@ class GUIForm(QMainWindow):
         """
         self.window = QMainWindow()
         self.ui_linkreader = Ui_LinkReader()
-        self.ui_linkreader.setupUi(self.window)
+        self.ui_linkreader.setup_ui(self.window)
         self.ui_linkreader.pushButton.setDefault(True)
         self.window.setFixedSize(self.window.width(), self.window.height())
         self.ui_linkreader.pushButton.clicked.connect(self.process_url)
@@ -102,14 +102,14 @@ class GUIForm(QMainWindow):
         """
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
-        fileName, _ = QFileDialog.getOpenFileName(self,
+        file_name, _ = QFileDialog.getOpenFileName(self,
                                                   "Select text file",
                                                   "",
                                                   "Text Files(*);;",
                                                   options=options)
-        if fileName:
+        if file_name:
             try:
-                content = read_file(fileName)
+                content = read_file(file_name)
                 self.ui.plainTextEdit.setPlainText("".join(content))
             except:
                 QMessageBox.question(self, 'Error', "Chosen file is not text",
