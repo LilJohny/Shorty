@@ -13,7 +13,7 @@ gast==0.2.2
 idna==2.8
 isort==4.3.21
 jieba3k==0.35.1
-joblib==0.16.0
+joblib==1.2.0
 langdetect==1.0.8
 lazy-object-proxy==1.4.0
 lxml==4.5.2
